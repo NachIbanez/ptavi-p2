@@ -15,10 +15,10 @@ class Calculadora(object):
 
 class CalculadoraHija(Calculadora):
 
-    def multiplicar(self, operando1, operando2):
+    def multiplica(self, operando1, operando2):
         return(operando1 * operando2)
 
-    def dividir(self, operando1, operando2):
+    def divide(self, operando1, operando2):
         return(operando1 / operando2)
 
 calcu = CalculadoraHija()
@@ -32,13 +32,13 @@ try:
         result = calcu.suma(operando1, operando2)
     elif operacion == "resta":
         result = calcu.resta(operando1, operando2)
-    elif operacion == "multiplicar":
-        result = calcu.multiplicar(operando1, operando2)
-    elif operacion == "dividir":
-        result = calcu.dividir(operando1, operando2)
+    elif operacion == "multiplica":
+        result = calcu.multiplica(operando1, operando2)
+    elif operacion == "divide":
+        result = calcu.divide(operando1, operando2)
     else:
         sys.exit("Error: El argumento 2 debe de indicar sólamente suma, " +
-                 "resta, multiplicar o dividir")
+                 "resta, multiplica o divide")
 except ValueError:
         sys.exit("Error: El argumento 1 y 3 deben de ser números")
 except ZeroDivisionError:
