@@ -13,7 +13,7 @@ if __name__ == "__main__":
         with open(sys.argv[1]) as File:
             file = csv.reader(File, delimiter=" ")
             for linea in file:
-                elementos = ", ".join(linea) + "\n"
+                elementos = " ".join(linea) + "\n"
                 lineas.append(elementos)
         print(lineas)
 
