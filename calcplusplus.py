@@ -2,15 +2,20 @@
 # -*- coding: utf-8 -*-
 
 import sys
+import csv
 from calcoohija import CalculadoraHija
-
-calcu = CalculadoraHija()
 
 if __name__ == "__main__":
     try:
+        calcu = CalculadoraHija()
+        lineas = []
 
-        fichero = open(str(sys.argv[1]))
-        lineas = fichero.readlines()
+        with open(sys.argv[1]) as File:
+            file = csv.reader(File, delimiter=" ")
+            for linea in file:
+                elementos = ", ".join(linea) + "\n"
+                lineas.append(elementos)
+        print(lineas)
 
         for linea in lineas:
 
@@ -43,7 +48,5 @@ if __name__ == "__main__":
             print("El resultado de la operación " + operacion + " es " +
                   str(result))
 
-    except ValueError:
-        sys.exit("Error: El argumento 1 y 3 deben de ser números")
     except ZeroDivisionError:
         sys.exit("Division by zero is not allowed")
