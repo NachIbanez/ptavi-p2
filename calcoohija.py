@@ -31,10 +31,10 @@ if __name__ == "__main__":
         elif operacion == "divide":
             result = calcu.divide(operando1, operando2)
         else:
-            sys.exit("Error: El argumento 2 debe de indicar sólamente suma, " +
-                     "resta, multiplica o divide")
+            sys.exit("Error: argument 2 must be suma " +
+                     "resta, multiplica or divide")
     except ValueError:
-        sys.exit("Error: El argumento 1 y 3 deben de ser números")
+        sys.exit("Error: arguments 1 and 3 must be numbers")
     except ZeroDivisionError:
         sys.exit("Division by zero is not allowed")
 

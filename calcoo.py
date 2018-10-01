@@ -21,13 +21,13 @@ if __name__ == "__main__":
         operando1 = int(sys.argv[1])
         operando2 = int(sys.argv[3])
     except ValueError:
-        sys.exit("Error: El argumento 1 y 3 deben de ser números")
+        sys.exit("Error: arguments 1 and 3 must be numbers")
 
     if sys.argv[2] == "suma":
         result = calcu.suma(operando1, operando2)
     elif sys.argv[2] == "resta":
         result = calcu.resta(operando1, operando2)
     else:
-        sys.exit("Error: El argumento 2 debe de indicar suma o resta")
+        sys.exit("Error: argument 2 must be suma or resta")
 
-    print("El resultado es " + str(result))
+    print("The result is " + str(result))
