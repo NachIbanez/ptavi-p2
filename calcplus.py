@@ -47,4 +47,4 @@ if __name__ == "__main__":
     except ZeroDivisionError:
         sys.exit("Division by zero is not allowed")
     except FileNotFoundError:
-        sys.exit("File or directory '" + str(sys.argv[1]) +"' not found")
+        sys.exit("File or directory '" + str(sys.argv[1]) + "' not found")
